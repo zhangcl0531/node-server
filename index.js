@@ -27,9 +27,9 @@ http.createServer(function(req, res){
       break;
     case '/user/123':
 
-      res.end( fs.readFileSync(__dirname + '/static/user.tpl' ))
+      res.end( fs.readFileSync(__dirname + '/sample/user.tpl' ))
       break;
     default:
-      res.end( fs.readFileSync(__dirname + '/static' + pathObj.pathname) )
+      res.end( fs.readFileSync(__dirname + '/sample' + pathObj.pathname) )
   }
 }).listen(8080)
